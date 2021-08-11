@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-y: overlay;
 }
 
 *,
@@ -28,6 +29,11 @@ ul {
 ol,
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {

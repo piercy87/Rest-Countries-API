@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import styles from "./CountryCard.module.css";
@@ -10,7 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 export default function CountryCard({ country }) {
 
   return (
-    <Link to={`/Rest-Countries-APi/${country.alpha2Code}`}>
+    <Link to={`/Rest-Countries-API/${country.alpha2Code}`}>
       <Card className={styles.card} key={country.name} className="corners dmElement">
         <CardActionArea className={styles.cardActionArea}>
           <div className={styles.flagDiv}>
@@ -27,13 +26,13 @@ export default function CountryCard({ country }) {
               {country.name}
             </Typography>
             <Typography variant="body2" color="white" component="p">
-              {`Population: ${(country.population).toLocaleString()}`}
+              Population: <span>{(country.population).toLocaleString()}</span>
             </Typography>
             <Typography variant="body2" color="white" component="p">
-              {`Capital City: ${country.capital}`}
+              Region: <span>{country.region}</span>
             </Typography>
             <Typography variant="body2" color="white" component="p">
-              {`Region: ${country.region}`}
+              Capital: <span>{country.capital}</span>
             </Typography>
           </CardContent>
         </CardActionArea>
